@@ -17,9 +17,16 @@ Since the metric is integerated in the yolo framework, you just need to clone th
 
 ``git clone https://gitlab.com/computational-materials-science/public/publication-data-and-code/2023_IEEE_Instance-Segmentation-of-Dislocations-in-TEM.git``
 
-Create a python environment using 
-``pip install -r requirements.txt``
+Create a python environment and install ultralytics package locally using 
 
+```bash
+pip install -r requirements.txt
+
+cd ultralytics 
+
+pip install -e . 
+
+```
 Download the [checkpoint](https://drive.google.com/file/d/1ABDDwBTycn-z8JIRTqfRIQlycoHlMQNc) of the model and create a directory checkpoint and place it there . 
 
 The dataset is provided as a zip file "datasets.zip". you may unzip this file and get the complete dataset used in our work. Some of the sample TEM images of dislocation microstructure to test the code can be found at ./sample_images. 
