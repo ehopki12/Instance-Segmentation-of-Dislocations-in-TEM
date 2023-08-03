@@ -22,7 +22,7 @@ Create a python enviroment using
 
 Download the [checkpoint](https://drive.google.com/file/d/1ABDDwBTycn-z8JIRTqfRIQlycoHlMQNc) of the model and create a directory checkpoint and place it there . 
 
-The dataset can be found at location ./datasets . Some of the sample TEM images of dislocation microstructure to test the code can be found at ./sample_images. 
+The dataset is provided as a zip file "datasets.zip". you may unzip this file and get the complete dataset used in our work. Some of the sample TEM images of dislocation microstructure to test the code can be found at ./sample_images. 
 
 ## Usage 
 A jupyter notebook [Predict](./Jupyternotebook/Predict.ipynb) can be  used to start making predictions using checkpoint provided by our training.  
