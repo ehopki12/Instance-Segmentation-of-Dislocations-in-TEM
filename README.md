@@ -17,7 +17,7 @@ Since the metric is integerated in the yolo framework, you just need to clone th
 
 ``git clone https://gitlab.com/computational-materials-science/public/publication-data-and-code/2023_IEEE_Instance-Segmentation-of-Dislocations-in-TEM.git``
 
-Create a python enviroment using 
+Create a python environment using 
 ``pip install -r requirements.txt``
 
 Download the [checkpoint](https://drive.google.com/file/d/1ABDDwBTycn-z8JIRTqfRIQlycoHlMQNc) of the model and create a directory checkpoint and place it there . 
