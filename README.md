@@ -32,18 +32,31 @@ Download the [checkpoint](https://drive.google.com/file/d/1ABDDwBTycn-z8JIRTqfRI
 The dataset is provided as a zip file "datasets.zip". you may unzip this file and get the complete dataset used in our work. Some of the sample TEM images of dislocation microstructure to test the code can be found at ./sample_images. 
 
 ## Usage 
-### Prediction on new TEM images 
-A jupyter notebook [Predict](./Jupyternotebook/Predict.ipynb) can be  used to start making predictions using checkpoint provided by our training.  
+### Prediction on new TEM images  
+A jupyter notebook [Predict](./Jupyternotebook/Predict.ipynb) can be  used to start making predictions using checkpoint provided by our training. To make the predictions one can directly install the YOLO using 
+```bash
+pip install ultralytics
+```  
+and download the checkpoint as explained above and start making predictions. 
 
 ### Prediction and representing dislocations as splines. 
-
-Jupyter notebook [Predict_extract_spline](./Jupyternotebook/Predict_extract_spline.ipynb) can be used to use the predictions from yolo and represent each dislocation as spline. The notebook can be used to generate a json file which can be used in [labelme](https://github.com/wkentaro/labelme). 
+The dislocation masks obtained from predictions using the Yolo can be further processed to represent each dislocation as spline. You may use 
+Jupyter notebook [Predict_extract_spline](./Jupyternotebook/Predict_extract_spline.ipynb) that can be used to represent each dislocation as spline. The notebook can be used to generate a json file which can be used in [labelme](https://github.com/wkentaro/labelme). 
 
 <div align="center">
   <img width="1000" height="600" src="imgs/labelme.png">
   <br>
   <b>Representing each dislocation as spline </b>
 </div>
+It might be useful in case of finetuning the model on your own data. The steps need to be followed to finetune the model on your own data are 
+
+1. Use [Predict_extract_spline](./Jupyternotebook/Predict_extract_spline.ipynb) to obtain JSON files for your TEM images.
+
+2. Use Labelme to open the JSON files and make necessary corrections to the support points of the splines which represent the dislocations. You may move the points, delete them, or annotate any dislocation which is not predicted by the model. Once done, save and it will save the JSON file.
+
+3. Now you have the labelled data which has been corrected. This data can now be converted to COCO format as explained in [labelme](https://github.com/wkentaro/labelme/tree/main/examples/instance_segmentation) for the instance segmentation task.
+
+4. You may now fine-tune the model on your own data using YOLO. Make sure to load our checkpoint before training the model.
 
 
 Please create an issue if you any problems, we will get back to you and fix it. 
