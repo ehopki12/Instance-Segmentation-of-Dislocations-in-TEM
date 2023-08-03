@@ -4,7 +4,12 @@ This repo is the implementation of the physical based metric to evaluate Machine
 
 ## A Quick Overview 
 We use Yolov8 model from [Ultralytics](https://github.com/ultralytics/ultralytics) to perform instance segmentation on Real TEM data which is handlabelled using [RoboloFlow](https://roboflow.com/). We add our [physical based evaluation metric](./ultralytics/ultralytics/yolo/v8/segment/loss.py) to the yolov8 model.  
-<img width="330" height="500" align="center" src="imgs/Result.png">
+
+<div align="center">
+  <img width="330" height="500" src="imgs/Result.png">
+  <br>
+  <b>Instance segmentation of the TEM images of dislocation microstructure using Yolov8</b>
+</div>
 
 
 ## Requirement
