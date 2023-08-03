@@ -40,7 +40,7 @@ A jupyter notebook [Predict](./Jupyternotebook/Predict.ipynb) can be  used to st
 Jupyter notebook [Predict_extract_spline](./Jupyternotebook/Predict_extract_spline.ipynb) can be used to use the predictions from yolo and represent each dislocation as spline. The notebook can be used to generate a json file which can be used in [labelme](https://github.com/wkentaro/labelme). 
 
 <div align="center">
-  <img width="500" height="300" src="imgs/labelme.png">
+  <img width="1000" height="600" src="imgs/labelme.png">
   <br>
   <b>Representing each dislocation as spline </b>
 </div>
