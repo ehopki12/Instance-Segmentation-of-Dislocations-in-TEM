@@ -17,3 +17,4 @@ thop>=0.1.1
 psutil
 certifi>=2022.12.7
 albumentations>=1.0.3
+labelme==5.1.1
