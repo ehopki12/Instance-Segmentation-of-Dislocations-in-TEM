@@ -32,7 +32,18 @@ Download the [checkpoint](https://drive.google.com/file/d/1ABDDwBTycn-z8JIRTqfRI
 The dataset is provided as a zip file "datasets.zip". you may unzip this file and get the complete dataset used in our work. Some of the sample TEM images of dislocation microstructure to test the code can be found at ./sample_images. 
 
 ## Usage 
+### Prediction on new TEM images 
 A jupyter notebook [Predict](./Jupyternotebook/Predict.ipynb) can be  used to start making predictions using checkpoint provided by our training.  
+
+### Prediction and representing dislocations as splines. 
+
+Jupyter notebook [Predict_extract_spline](./Jupyternotebook/Predict_extract_spline.ipynb) can be used to use the predictions from yolo and represent each dislocation as spline. The notebook can be used to generate a json file which can be used in [labelme](https://github.com/wkentaro/labelme). 
+
+<div align="center">
+  <img width="500" height="300" src="imgs/labelme.png">
+  <br>
+  <b>Representing each dislocation as spline </b>
+</div>
 
 
 Please create an issue if you any problems, we will get back to you and fix it. 
